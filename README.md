@@ -7,6 +7,10 @@ Example
 -------
 
 ```go
+import (
+	steam "github.com/ljesus/steam-go"
+)
+
 steam_api := steam.NewSteamApi(config.Config.SteamApiKey)
 
 if data, err := steam_api.GetPlayerSummaries([]string{steam_id}); err == nil {
