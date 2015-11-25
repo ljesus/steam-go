@@ -6,7 +6,13 @@ Steam API implementation in GoLang
 Example
 -------
 
-TODO
+```go
+steam_api := steam.NewSteamApi(config.Config.SteamApiKey)
+
+if data, err := steam_api.GetPlayerSummaries([]string{steam_id}); err == nil {
+	//Do things with data
+}
+```
 
 Web-Services Implemented
 ---------
