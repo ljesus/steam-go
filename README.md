@@ -22,7 +22,7 @@ Web-Services Implemented
 ---------
 
 	GetPlayerSummaries (v0002)
-	
+	GetFriendList (v0001)
 
 Disclaimer
 --------
