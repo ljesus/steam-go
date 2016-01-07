@@ -62,3 +62,22 @@ func (self *SteamApi) GetPlayerSummaries(steam_ids []string) (response *GetPlaye
 
 	return response, nil
 }
+
+func (self *SteamApi) GetFriendList(steam_id string) (response *GetFriendListResponse, err error) {
+
+	values := url.Values{}
+	values.Set("steamid", steam_id)
+	values.Set("relationship", "friend")
+
+	body, err := self.performGet(SteamApiGetFriendList, values)
+
+	if err != nil {
+		return nil, err
+	}
+
+	response = new(GetFriendListResponse)
+	json.Unmarshal(body, response)
+
+	return response, nil
+
+}

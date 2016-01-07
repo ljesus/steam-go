@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 	"github.com/stretchr/testify/assert"
+	"fmt"
 )
 
 type ClientConfig struct {
@@ -18,6 +19,14 @@ func TestGetPlayerSummaries(t *testing.T) {
 	resp, err := api.GetPlayerSummaries([]string{"76561197960435530"})
 	assert.NoError(t, err)
 	assert.NotNil(t, resp.Response.Players)
+}
+
+func TestGetFriendList(t *testing.T) {
+	api := getSteamApi()
+	resp, err := api.GetFriendList("76561197960435530")
+	fmt.Println(resp)
+	assert.NoError(t, err)
+	assert.NotNil(t, resp.FriendsList.Friends)
 }
 
 func getSteamApi() *SteamApi {

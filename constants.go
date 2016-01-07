@@ -9,4 +9,5 @@ const (
 
 const (
 	SteamApiGetPlayerSummaries = SteamApiUser + "GetPlayerSummaries/" + SteamApiV2 + "/?"
+	SteamApiGetFriendList = SteamApiUser + "GetFriendList/" + SteamApiV1 + "/?"
 )

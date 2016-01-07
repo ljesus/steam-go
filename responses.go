@@ -1,5 +1,9 @@
 package steam_go
 
+/**
+GetPlayerSummaries
+ */
+
 type Player struct {
 	SteamId							string		`json:"steamid"`
 	CommunityVisibilityState		int			`json:"communityvisibilitystate"`
@@ -20,10 +24,6 @@ type Player struct {
 	LocCityId						int			`json:"loccityid"`
 }
 
-/**
-GetPlayerSummaries
- */
-
 type GetPlayerSummariesResponse struct {
 	Response	GetPlayerSummariesResponseBody
 }
@@ -32,3 +32,20 @@ type GetPlayerSummariesResponseBody struct {
 	Players		[]Player
 }
 
+/**
+GetFriendList
+ */
+
+type Friend struct {
+	SteamId							string		`json:"steamid"`
+	Relationship					string		`json:"relationship"`
+	FriendSince						int64		`json:"friend_since"`
+}
+
+type GetFriendListResponse struct {
+	FriendsList		GetFriendListResponseBody	`json:"friendslist"`
+}
+
+type GetFriendListResponseBody struct {
+	Friends		[]Friend
+}
