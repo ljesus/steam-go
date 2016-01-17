@@ -25,7 +25,6 @@ func TestGetPlayerSummaries(t *testing.T) {
 func TestGetFriendList(t *testing.T) {
 	api := getSteamApi()
 	resp, err := api.GetFriendList("76561197960435530")
-	fmt.Println(resp)
 	assert.NoError(t, err)
 	assert.NotNil(t, resp.FriendsList.Friends)
 }
