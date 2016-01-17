@@ -6,6 +6,7 @@ import (
 	"testing"
 	"github.com/stretchr/testify/assert"
 	"fmt"
+	"os"
 )
 
 type ClientConfig struct {
