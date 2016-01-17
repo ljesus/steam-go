@@ -1,3 +1,4 @@
+[![GoDoc](https://godoc.org/github.com/ljesus/steam-go?status.svg)](https://godoc.org/github.com/ljesus/steam-go) [![Build Status](https://travis-ci.org/ljesus/steam-go.svg?branch=master)](https://travis-ci.org/ljesus/steam-go)
 # steam-go
 Steam API implementation in GoLang
 
