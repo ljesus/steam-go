@@ -35,9 +35,13 @@ func getSteamApi() *SteamApi {
 }
 
 func getClientConfig() ClientConfig {
+
 	if CONFIG.SteamApiKey == "" {
-		r, _ := ioutil.ReadFile("api_test.cfg")
-		json.Unmarshal(r, &CONFIG)
+		CONFIG.SteamApiKey = os.Getenv("STEAM_API_KEY")
+		if CONFIG.SteamApiKey == "" {
+			r, _ := ioutil.ReadFile("api_test.cfg")
+			json.Unmarshal(r, &CONFIG)
+		}
 	}
 	return CONFIG
 }
